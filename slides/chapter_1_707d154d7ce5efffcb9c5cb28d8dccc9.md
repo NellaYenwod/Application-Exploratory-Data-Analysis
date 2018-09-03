@@ -142,6 +142,8 @@ The corresponding probability is `p`, which is 0.66.
 
 That means that about 66% of the respondents are 51 years old or younger.
 
+The arrow in the figure shows how you could read this value off the CDF, at least approximately.
+
 
 ---
 ## Evaluating the inverse CDF
@@ -174,7 +176,13 @@ In this example, I look up the probability 0.25, which returns 30.  That means t
 
 Another way to say the same thing is "age 30 is the 25th percentile of this distribution".
 
-I also look up probability 0.75, which returns
+I also look up probability 0.75, which returns 57, so 75% of the respondents are 57 or younger.
+
+Or you could sat that the 75th percentile of this distribution is age 57.
+
+Again, the arrows in the figure show how you could read these values off the graph.
+
+By the way, the distance from the 25th to the 75th percentile is called the interquartile range, or IQR.  It measures the spread of the distribution, so it is similar to standard deviation or variance.  Because it is based on percentiles, it doesn't get thrown off by extreme values or outliers, the way variance does.  So IQR can be more "robust" than variance, which means it works well even if there are errors in the data or extreme values.
 
 
 ---
@@ -186,5 +194,5 @@ key: "27c0083e6b"
 ```
 
 `@script`
-
+Is this an outro, or am I supposed to replace it?
 

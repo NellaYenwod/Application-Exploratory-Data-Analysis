@@ -10,7 +10,7 @@ type: NormalExercise
 lang: python
 xp: 100 
 skills: 2
-key: 4d8b92a908   
+key: 203e881a0a   
 ```
 
 
@@ -69,3 +69,15 @@ success_msg("Some praise! Then reinforce a learning objective from the exercise.
 ```
 
 
+---
+
+## Reading CDFs
+
+```yaml
+type: VideoExercise 
+xp: 50 
+key: 7fb9b8190e   
+```
+
+`@projector_key`
+707d154d7ce5efffcb9c5cb28d8dccc9

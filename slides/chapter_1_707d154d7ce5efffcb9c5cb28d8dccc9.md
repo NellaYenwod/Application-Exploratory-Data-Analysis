@@ -43,7 +43,9 @@ for a given value of x.
 
 
 `@script`
+In a previous lesson we saw the probability mass function, or PMF, which tells you -- if you draw a random value from a distribution -- what's the chance of getting x, for any give value of x.
 
+In this lesson, we'll start working with the cumulative distribution function, or CDF, which tells you the change of getting a value less than or equal to x.
 
 
 ---
@@ -69,7 +71,15 @@ The CDF is the cumulative sum of the PMF.
 
 
 `@script`
+As an example, suppose the distribution only has 5 elements, 1, 2, 2, 3, and 5.
 
+The PMF says that the probability of value 1 is 1/5; the probability of value 2 is 2/5, and the probabilities for 3 and 5 are 1/5.
+
+The CDF is the cumulative sum of the probabilities from the PMF.
+
+For example, the CDF of 2 is three fifths, because three out of 5 values in the distribution are less than or equal to 2.
+
+The CDF of 5 is 1, or 100%, because all of the values in the distribution are less than or equal to 5.
 
 
 ---
@@ -78,6 +88,7 @@ The CDF is the cumulative sum of the PMF.
 ```yaml
 type: "FullCodeSlide"
 key: "322ac3909c"
+center_content: true
 ```
 
 `@part1`
@@ -87,11 +98,83 @@ cdf = Cdf.from_seq(gss.age)
 cdf.plot()
 decorate(xlabel='Age', ylabel='CDF')
 ```
-![](image-url)
+![CDF of ages in GSS](https://assets.datacamp.com/production/repositories/3500/datasets/1ef32a8450fd93a8069f1aca0c4fd692bda76369/chap2lesson1fig1.png)
 
 
 `@script`
+The `eda` library provides a `Cdf` object which is similar to the `Pmf` object we've seen.
 
+It provides the `from_seq` function, which takes any kind of sequence and returns a new Cdf object.
+
+In this case, the sequence is the Series `gss.age`, from the GSS dataset.  So this is the distribution of ages for the respondents in the General Social Survey.
+
+The x-axis is the ages, from 18 to 89.
+
+The y-axis is the cumulative probabilities, from 0 to 1.
+
+
+---
+## Evaluating the CDF
+
+```yaml
+type: "TwoColumns"
+key: "5f158e9604"
+```
+
+`@part1`
+```python
+q = 51
+p = cdf(q)
+0.66
+```
+
+
+`@part2`
+![Example showing the forward interpretation of the CDF](https://assets.datacamp.com/production/repositories/3500/datasets/6e80f6a33fcd8f2bac27bbdec07f5e7158ab19ea/chap2lesson1fig2.png)
+
+
+`@script`
+The cumulative distribution function is actually a function, so if you give it an age, it returns the corresponding probability.
+
+In this example, the age is the quantity, `q`, which is 51.
+
+The corresponding probability is `p`, which is 0.66.
+
+That means that about 66% of the respondents are 51 years old or younger.
+
+
+---
+## Evaluating the inverse CDF
+
+```yaml
+type: "TwoColumns"
+key: "a61436a1b4"
+```
+
+`@part1`
+```python
+p = 0.25
+q = cdf.inverse(p)
+30
+
+p = 0.75
+q = cdf.inverse(p)
+57
+```
+
+
+`@part2`
+![Example showing the inverse interpretation of the CDF](https://assets.datacamp.com/production/repositories/3500/datasets/19d39541bddf4848c836f797a51c634353e1959c/chap2lesson1fig3.png)
+
+
+`@script`
+The CDF is not just a function; it's an invertible function, which means that if you have a probability, `p`, you can look up the corresponding quantity, `q`.
+
+In this example, I look up the probability 0.25, which returns 30.  That means that 25% of the respondents are age 30 or less.
+
+Another way to say the same thing is "age 30 is the 25th percentile of this distribution".
+
+I also look up probability 0.75, which returns
 
 
 ---

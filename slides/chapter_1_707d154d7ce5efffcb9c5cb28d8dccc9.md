@@ -17,7 +17,11 @@ title: Professor, Olin College
 
 
 `@script`
-Script
+In a previous lesson we saw the probability mass function, or PMF, which represents the possible values in a distribution and their probabilities.
+
+In this lesson we'll see another way to represent a distribution, the cumulative distribution function, or CDF.
+
+CDFs are useful for some computations, they are also a great way to visualize and compare distributions.
 
 
 ---
@@ -43,9 +47,9 @@ for a given value of x.
 
 
 `@script`
-In a previous lesson we saw the probability mass function, or PMF, which tells you -- if you draw a random value from a distribution -- what's the chance of getting x, for any give value of x.
+You might remember that a PMF tells you -- if you draw a random value from a distribution -- what's the chance of getting x, for any give value of x.
 
-In this lesson, we'll start working with the cumulative distribution function, or CDF, which tells you the change of getting a value less than or equal to x.
+The CDF is similar; it tells you the change of getting a value less than or equal to x.
 
 
 ---
@@ -71,7 +75,7 @@ The CDF is the cumulative sum of the PMF.
 
 
 `@script`
-As an example, suppose the distribution only has 5 elements, 1, 2, 2, 3, and 5.
+As an small example, suppose the distribution only has 5 elements, 1, 2, 2, 3, and 5.
 
 The PMF says that the probability of value 1 is 1/5; the probability of value 2 is 2/5, and the probabilities for 3 and 5 are 1/5.
 

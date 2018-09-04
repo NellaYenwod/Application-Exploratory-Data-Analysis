@@ -1,6 +1,8 @@
 ---
 title: Insert title here
 key: 707d154d7ce5efffcb9c5cb28d8dccc9
+video_link:
+  mp3: https://assets.datacamp.com/production/repositories/3500/datasets/8727809de97ca5053f26d423ca2602cd57eba36d/2018-09-04-11:51:07.mp3
 
 ---
 ## Cumulative distribution functions
@@ -17,6 +19,8 @@ title: Professor, Olin College
 
 
 `@script`
+This is Exploratory Data Analysis, Chapter 2, Lesson 1, Cumulative Distribution functions.
+
 In a previous lesson we saw the probability mass function, or PMF, which represents the possible values in a distribution and their probabilities.
 
 In this lesson we'll see another way to represent a distribution, the cumulative distribution function, or CDF.
@@ -47,9 +51,9 @@ for a given value of x.
 
 
 `@script`
-You might remember that a PMF tells you -- if you draw a random value from a distribution -- what's the chance of getting x, for any give value of x.
+You might remember that a PMF tells you -- if you draw a random value from a distribution -- what's the chance of getting x, for any given value of x.
 
-The CDF is similar; it tells you the change of getting a value less than or equal to x.
+The CDF is similar; if you draw a random value from a distribution, it tells you the chance of getting a value less than or equal to x.
 
 
 ---
@@ -186,9 +190,9 @@ Another way to say the same thing is "age 30 is the 25th percentile of this dist
 
 I also look up probability 0.75, which returns 57, so 75% of the respondents are 57 or younger.
 
-Or you could sat that the 75th percentile of this distribution is age 57.
+Or you could say that the 75th percentile of this distribution is age 57.
 
-Again, the arrows in the figure show how you could read these values off the graph.
+Again, the arrows in the figure show how you could read these values off the CDF.
 
 By the way, the distance from the 25th to the 75th percentile is called the interquartile range, or IQR.  It measures the spread of the distribution, so it is similar to standard deviation or variance.  Because it is based on percentiles, it doesn't get thrown off by extreme values or outliers, the way variance does.  So IQR can be more "robust" than variance, which means it works well even if there are errors in the data or extreme values.
 

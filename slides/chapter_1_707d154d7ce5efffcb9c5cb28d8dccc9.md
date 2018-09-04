@@ -198,7 +198,7 @@ By the way, the distance from the 25th to the 75th percentile is called the inte
 
 
 ---
-## Final Slide
+## Let's Practice
 
 ```yaml
 type: "FinalSlide"

@@ -89,8 +89,6 @@ For example, the CDF of 2 is three fifths, because three out of 5 values in the 
 
 The CDF of 5 is 1, or 100%, because all of the values in the distribution are less than or equal to 5.
 
-[Any suggestions on formatting a table?]
-
 
 ---
 ## Make and plot a CDF
@@ -121,8 +119,6 @@ In this case, the sequence is the Series `gss.age`, from the GSS dataset.  So th
 The x-axis is the ages, from 18 to 89.
 
 The y-axis is the cumulative probabilities, from 0 to 1.
-
-[Can I change this slide type to two columns?]
 
 
 ---
@@ -198,7 +194,7 @@ By the way, the distance from the 25th to the 75th percentile is called the inte
 
 
 ---
-## Let's Practice
+## Final Slide
 
 ```yaml
 type: "FinalSlide"
